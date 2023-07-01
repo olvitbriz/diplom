@@ -24,11 +24,6 @@ public class PaymentPage {
     public static SelenideElement sendField=$$("button").find(Condition.exactText("Продолжить"));
 
 
-//    public static SelenideElement cardNumberError=$$("input__sub").find(Condition.exactText("Неверный формат"));
- //   public static SelenideElement monthError=$$("input__sub").find(Condition.exactText("Неверно указан срок действия карты"));
-  //  public static SelenideElement yearError=$$("input__sub").find(Condition.exactText("Истёк срок действия карты"));
- //   public static SelenideElement nameError=$$("input__sub").find(Condition.exactText("Поле обязательно для заполнения"));
-  //  public static SelenideElement cvvError=$$("input__sub").find(Condition.exactText("Неверный формат"));
 
     public static void verifyNotificationOkVisibility() {
 
