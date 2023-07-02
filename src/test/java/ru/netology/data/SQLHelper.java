@@ -20,21 +20,21 @@ public class SQLHelper {
         return DriverManager.getConnection("jdbc:mysql://localhost:3306/app", "app", "pass");
     }
 
-    public static String getPaymentStatus() {
+    public static DataHelper.Status getPaymentStatus() {
         var statusSQL = "SELECT status FROM payment_entity ORDER BY created DESC LIMIT 1";
         try (var conn = getConnection()) {
              var status=runner.query(conn, statusSQL, new ScalarHandler<String>());
-        return status;
+        return new DataHelper.Status(status);
         } catch (SQLException exception) {
             exception.printStackTrace();
        }
         return null;
    }
-    public static String getCreditStatus() {
+    public static DataHelper.Status getCreditStatus() {
         var statusSQL = "SELECT status FROM credit_request_entity ORDER BY created DESC LIMIT 1";
         try (var conn = getConnection()) {
             var status=runner.query(conn, statusSQL, new ScalarHandler<String>());
-            return status;
+            return new DataHelper.Status(status);
         } catch (SQLException exception) {
             exception.printStackTrace();
         }

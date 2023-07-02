@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46337c76-8f3f-4c9c-b0fb-2bb6e737539e" name="Changes" comment="forth">
+    <list default="true" id="46337c76-8f3f-4c9c-b0fb-2bb6e737539e" name="Changes" comment="five">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plan.md" beforeDir="false" afterPath="$PROJECT_DIR$/Plan.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/TravelOfTheDayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/TravelOfTheDayTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/data/DataHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/data/DataHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/data/SQLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/data/SQLHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +79,8 @@
       <recent name="D:\learning\diplom\qa-diploma\artifacts" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TravelOfTheDayTest.emptyNameCreditCase">
-    <configuration name="TravelOfTheDayTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.TravelOfTheDayTest.positivePaymentCase">
+    <configuration name="TravelOfTheDayTest.emptyCvvCreditCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -92,7 +93,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.TravelOfTheDayTest&quot;" />
+            <option value="&quot;ru.netology.TravelOfTheDayTest.emptyCvvCreditCase&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -125,7 +126,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TravelOfTheDayTest.invalidCvvCreditCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TravelOfTheDayTest.negativePaymentCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -138,7 +139,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.TravelOfTheDayTest.invalidCvvCreditCase&quot;" />
+            <option value="&quot;ru.netology.TravelOfTheDayTest.negativePaymentCase&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -148,7 +149,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TravelOfTheDayTest.invalidNameCreditCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TravelOfTheDayTest.positiveCreditCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -161,7 +162,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.TravelOfTheDayTest.invalidNameCreditCase&quot;" />
+            <option value="&quot;ru.netology.TravelOfTheDayTest.positiveCreditCase&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -171,7 +172,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TravelOfTheDayTest.invalidNamePaymentCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TravelOfTheDayTest.positivePaymentCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -184,7 +185,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.TravelOfTheDayTest.invalidNamePaymentCase&quot;" />
+            <option value="&quot;ru.netology.TravelOfTheDayTest.positivePaymentCase&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -196,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TravelOfTheDayTest.positivePaymentCase" />
+        <item itemvalue="Gradle.TravelOfTheDayTest.emptyCvvCreditCase" />
+        <item itemvalue="Gradle.TravelOfTheDayTest.negativePaymentCase" />
+        <item itemvalue="Gradle.TravelOfTheDayTest.positiveCreditCase" />
         <item itemvalue="Gradle.TravelOfTheDayTest.emptyNameCreditCase" />
-        <item itemvalue="Gradle.TravelOfTheDayTest" />
-        <item itemvalue="Gradle.TravelOfTheDayTest.invalidNameCreditCase" />
-        <item itemvalue="Gradle.TravelOfTheDayTest.invalidNamePaymentCase" />
-        <item itemvalue="Gradle.TravelOfTheDayTest.invalidCvvCreditCase" />
       </list>
     </recent_temporary>
   </component>
@@ -248,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688194756977</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="five">
+      <created>1688283522227</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688283522227</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -269,6 +277,7 @@
     <MESSAGE value="second" />
     <MESSAGE value="third" />
     <MESSAGE value="forth" />
-    <option name="LAST_COMMIT_MESSAGE" value="forth" />
+    <MESSAGE value="five" />
+    <option name="LAST_COMMIT_MESSAGE" value="five" />
   </component>
 </project>

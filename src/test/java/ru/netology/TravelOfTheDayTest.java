@@ -32,7 +32,7 @@ public class TravelOfTheDayTest {
         SelenideLogger.removeListener("allure");
     }
     @AfterAll
-    static void teardown() {
+   static void teardown() {
         cleanDatabase();
     }
 
@@ -49,7 +49,7 @@ public class TravelOfTheDayTest {
         PaymentPage.nameField.setValue(DataHelper.generateRandomInfo(1, 1).getName());
         PaymentPage.cvvField.setValue(DataHelper.generateRandomInfo(1, 1).getCvv());
         PaymentPage.sendField.click();
-        PaymentPage.verifyNotificationOkVisibility();
+        assertEquals("APPROVED",SQLHelper.getPaymentStatus());
 
     }
 
@@ -65,7 +65,7 @@ public class TravelOfTheDayTest {
         CreditPage.nameField.setValue(DataHelper.generateRandomInfo(1, 1).getName());
         CreditPage.cvvField.setValue(DataHelper.generateRandomInfo(1, 1).getCvv());
         CreditPage.sendField.click();
-        CreditPage.verifyNotificationOkVisibility();
+        assertEquals("APPROVED",SQLHelper.getCreditStatus());
     }
 
     @Test
@@ -80,7 +80,7 @@ public class TravelOfTheDayTest {
         PaymentPage.nameField.setValue(DataHelper.generateRandomInfo(1, 1).getName());
         PaymentPage.cvvField.setValue(DataHelper.generateRandomInfo(1, 1).getCvv());
         PaymentPage.sendField.click();
-        PaymentPage.verifyErrorNotificationVisibility();
+        assertEquals("DECLINED",SQLHelper.getPaymentStatus());
     }
 
     @Test
@@ -95,7 +95,7 @@ public class TravelOfTheDayTest {
         CreditPage.nameField.setValue(DataHelper.generateRandomInfo(1, 1).getName());
         CreditPage.cvvField.setValue(DataHelper.generateRandomInfo(1, 1).getCvv());
         CreditPage.sendField.click();
-        CreditPage.verifyErrorNotificationVisibility();
+        assertEquals("DECLINED",SQLHelper.getCreditStatus());
     }
 
     @Test
@@ -165,18 +165,7 @@ public class TravelOfTheDayTest {
         PaymentPage.sendField.click();
         $(".input__sub").shouldHave(Condition.exactText("Истёк срок действия карты")).shouldBe(Condition.visible);
     }
-    @Test
-    public void emptyNamePaymentCase() {
 
-        var paymentPage = open("http://localhost:8080", PaymentPage.class);
-        PaymentPage.paymentField.click();
-        PaymentPage.cardNumberField.setValue(DataHelper.generateRandomInfo(1,1).getNumber());
-        PaymentPage.monthField.setValue(DataHelper.generateRandomInfo(1, 1).getMonth());
-        PaymentPage.yearField.setValue(DataHelper.generateRandomInfo(1, 1).getYear());
-        PaymentPage.cvvField.setValue(DataHelper.generateRandomInfo(1, 1).getCvv());
-        PaymentPage.sendField.click();
-        $(".input__sub").shouldHave(Condition.exactText("Поле обязательно для заполнения")).shouldBe(Condition.visible);
-    }
     @Test
     public void invalidNamePaymentCase() {
 
@@ -200,6 +189,65 @@ public class TravelOfTheDayTest {
         PaymentPage.yearField.setValue(DataHelper.generateRandomInfo(1, 1).getYear());
         PaymentPage.nameField.setValue(DataHelper.generateRandomInfo(1, 1).getName());
         PaymentPage.cvvField.setValue(DataHelper.generateRandomInt());
+        PaymentPage.sendField.click();
+        $(".input__sub").shouldHave(Condition.exactText("Неверный формат")).shouldBe(Condition.visible);
+    }
+    @Test
+    public void emptyCardNumberPaymentCase() {
+
+        var paymentPage = open("http://localhost:8080", PaymentPage.class);
+        PaymentPage.paymentField.click();
+        PaymentPage.monthField.setValue(DataHelper.generateRandomInfo(1, 1).getMonth());
+        PaymentPage.yearField.setValue(DataHelper.generateRandomInfo(1, 1).getYear());
+        PaymentPage.nameField.setValue(DataHelper.generateRandomInfo(1, 1).getName());
+        PaymentPage.cvvField.setValue(DataHelper.generateRandomInfo(1, 1).getCvv());
+        PaymentPage.sendField.click();
+        $(".input__sub").shouldHave(Condition.exactText("Неверный формат")).shouldBe(Condition.visible);
+    }    @Test
+    public void emptyMonthPaymentCase() {
+
+        var paymentPage = open("http://localhost:8080", PaymentPage.class);
+        PaymentPage.paymentField.click();
+        PaymentPage.cardNumberField.setValue(DataHelper.generateRandomInfo(1,1).getNumber());
+        PaymentPage.yearField.setValue(DataHelper.generateRandomInfo(1, 1).getYear());
+        PaymentPage.nameField.setValue(DataHelper.generateRandomInfo(1, 1).getName());
+        PaymentPage.cvvField.setValue(DataHelper.generateRandomInfo(1, 1).getCvv());
+        PaymentPage.sendField.click();
+        $(".input__sub").shouldHave(Condition.exactText("Неверный формат")).shouldBe(Condition.visible);
+    }
+    @Test
+    public void emptyYearPaymentCase() {
+
+        var paymentPage = open("http://localhost:8080", PaymentPage.class);
+        PaymentPage.paymentField.click();
+        PaymentPage.cardNumberField.setValue(DataHelper.generateRandomInfo(1,1).getNumber());
+        PaymentPage.monthField.setValue(DataHelper.generateRandomInfo(1, 1).getMonth());
+        PaymentPage.nameField.setValue(DataHelper.generateRandomInfo(1, 1).getName());
+        PaymentPage.cvvField.setValue(DataHelper.generateRandomInfo(1, 1).getCvv());
+        PaymentPage.sendField.click();
+        $(".input__sub").shouldHave(Condition.exactText("Неверный формат")).shouldBe(Condition.visible);
+    }
+    @Test
+    public void emptyNamePaymentCase() {
+
+        var paymentPage = open("http://localhost:8080", PaymentPage.class);
+        PaymentPage.paymentField.click();
+        PaymentPage.cardNumberField.setValue(DataHelper.generateRandomInfo(1,1).getNumber());
+        PaymentPage.monthField.setValue(DataHelper.generateRandomInfo(1, 1).getMonth());
+        PaymentPage.yearField.setValue(DataHelper.generateRandomInfo(1, 1).getYear());
+        PaymentPage.cvvField.setValue(DataHelper.generateRandomInfo(1, 1).getCvv());
+        PaymentPage.sendField.click();
+        $(".input__sub").shouldHave(Condition.exactText("Поле обязательно для заполнения")).shouldBe(Condition.visible);
+    }
+    @Test
+    public void emptyCvvPaymentCase() {
+
+        var paymentPage = open("http://localhost:8080", PaymentPage.class);
+        PaymentPage.paymentField.click();
+        PaymentPage.cardNumberField.setValue(DataHelper.generateRandomInfo(1,1).getNumber());
+        PaymentPage.monthField.setValue(DataHelper.generateRandomInfo(1, 1).getMonth());
+        PaymentPage.yearField.setValue(DataHelper.generateRandomInfo(1, 1).getYear());
+        PaymentPage.nameField.setValue(DataHelper.generateRandomInfo(1, 1).getName());
         PaymentPage.sendField.click();
         $(".input__sub").shouldHave(Condition.exactText("Неверный формат")).shouldBe(Condition.visible);
     }
@@ -242,18 +290,7 @@ public class TravelOfTheDayTest {
         CreditPage.sendField.click();
         $(".input__sub").shouldHave(Condition.exactText("Истёк срок действия карты")).shouldBe(Condition.visible);
     }
-    @Test
-    public void emptyNameCreditCase() {
 
-        var creditPage = open("http://localhost:8080", CreditPage.class);
-        CreditPage.creditField.click();
-        CreditPage.cardNumberField.setValue(DataHelper.generateRandomInfo(1,1).getNumber());
-        CreditPage.monthField.setValue(DataHelper.generateRandomInfo(1, 1).getMonth());
-        CreditPage.yearField.setValue(DataHelper.generateRandomInfo(1, 1).getYear());
-        CreditPage.cvvField.setValue(DataHelper.generateRandomInfo(1, 1).getCvv());
-        CreditPage.sendField.click();
-        $(".input__sub").shouldHave(Condition.exactText("Поле обязательно для заполнения")).shouldBe(Condition.visible);
-    }
     @Test
     public void invalidNameCreditCase() {
 
@@ -280,4 +317,65 @@ public class TravelOfTheDayTest {
         CreditPage.sendField.click();
         $(".input__sub").shouldHave(Condition.exactText("Неверный формат")).shouldBe(Condition.visible);
     }
+    @Test
+    public void emptyCardNumberCreditCase() {
+
+        var creditPage = open("http://localhost:8080", CreditPage.class);
+        CreditPage.creditField.click();
+        CreditPage.monthField.setValue(DataHelper.generateRandomInfo(1, 1).getMonth());
+        CreditPage.yearField.setValue(DataHelper.generateRandomInfo(1, 1).getYear());
+        CreditPage.nameField.setValue(DataHelper.generateRandomInfo(1, 1).getName());
+        CreditPage.cvvField.setValue(DataHelper.generateRandomInfo(1, 1).getCvv());
+        CreditPage.sendField.click();
+        $(".input__sub").shouldHave(Condition.exactText("Неверный формат")).shouldBe(Condition.visible);
+    }
+    @Test
+    public void emptyMonthCreditCase() {
+
+        var creditPage = open("http://localhost:8080", CreditPage.class);
+        CreditPage.creditField.click();
+        CreditPage.cardNumberField.setValue(DataHelper.generateRandomInfo(1,1).getNumber());
+        CreditPage.yearField.setValue(DataHelper.generateRandomInfo(1, 1).getYear());
+        CreditPage.nameField.setValue(DataHelper.generateRandomInfo(1, 1).getName());
+        CreditPage.cvvField.setValue(DataHelper.generateRandomInfo(1, 1).getCvv());
+        CreditPage.sendField.click();
+        $(".input__sub").shouldHave(Condition.exactText("Неверный формат")).shouldBe(Condition.visible);
+    }
+    @Test
+    public void emptyYearCreditCase() {
+
+        var creditPage = open("http://localhost:8080", CreditPage.class);
+        CreditPage.creditField.click();
+        CreditPage.cardNumberField.setValue(DataHelper.generateRandomInfo(1,1).getNumber());
+        CreditPage.monthField.setValue(DataHelper.generateRandomInfo(1, 1).getMonth());
+        CreditPage.nameField.setValue(DataHelper.generateRandomInfo(1, 1).getName());
+        CreditPage.cvvField.setValue(DataHelper.generateRandomInfo(1, 1).getCvv());
+        CreditPage.sendField.click();
+        $(".input__sub").shouldHave(Condition.exactText("Неверный формат")).shouldBe(Condition.visible);
+    }
+    @Test
+    public void emptyNameCreditCase() {
+
+        var creditPage = open("http://localhost:8080", CreditPage.class);
+        CreditPage.creditField.click();
+        CreditPage.cardNumberField.setValue(DataHelper.generateRandomInfo(1,1).getNumber());
+        CreditPage.monthField.setValue(DataHelper.generateRandomInfo(1, 1).getMonth());
+        CreditPage.yearField.setValue(DataHelper.generateRandomInfo(1, 1).getYear());
+        CreditPage.cvvField.setValue(DataHelper.generateRandomInfo(1, 1).getCvv());
+        CreditPage.sendField.click();
+        $(".input__sub").shouldHave(Condition.exactText("Поле обязательно для заполнения")).shouldBe(Condition.visible);
+    }
+    @Test
+    public void emptyCvvCreditCase() {
+
+        var creditPage = open("http://localhost:8080", CreditPage.class);
+        CreditPage.creditField.click();
+        CreditPage.cardNumberField.setValue(DataHelper.generateRandomInfo(1,1).getNumber());
+        CreditPage.monthField.setValue(DataHelper.generateRandomInfo(1, 1).getMonth());
+        CreditPage.yearField.setValue(DataHelper.generateRandomInfo(1, 1).getYear());
+        CreditPage.nameField.setValue(DataHelper.generateRandomInfo(1, 1).getName());
+        CreditPage.sendField.click();
+        $(".input__sub").shouldHave(Condition.exactText("Неверный формат")).shouldBe(Condition.visible);
+    }
+
 }
