@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46337c76-8f3f-4c9c-b0fb-2bb6e737539e" name="Changes" comment="eight">
+    <list default="true" id="46337c76-8f3f-4c9c-b0fb-2bb6e737539e" name="Changes" comment="ten">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plan.md" beforeDir="false" afterPath="$PROJECT_DIR$/Plan.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/TravelOfTheDayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/TravelOfTheDayTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +77,8 @@
       <recent name="D:\learning\diplom\qa-diploma\artifacts" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TravelOfTheDayTest.positivePaymentCase">
-    <configuration name="TravelOfTheDayTest.emptyCvvCreditCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.TravelOfTheDayTest.emptyCardNumberPaymentCase">
+    <configuration name="TravelOfTheDayTest.boardMonthAndYearPaymentCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -91,7 +91,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.TravelOfTheDayTest.emptyCvvCreditCase&quot;" />
+            <option value="&quot;ru.netology.TravelOfTheDayTest.boardMonthAndYearPaymentCase&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -101,7 +101,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TravelOfTheDayTest.emptyNameCreditCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TravelOfTheDayTest.emptyCardNumberPaymentCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -114,7 +114,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.TravelOfTheDayTest.emptyNameCreditCase&quot;" />
+            <option value="&quot;ru.netology.TravelOfTheDayTest.emptyCardNumberPaymentCase&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -124,7 +124,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TravelOfTheDayTest.negativePaymentCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TravelOfTheDayTest.invalidMonthPaymentCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -137,7 +137,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.TravelOfTheDayTest.negativePaymentCase&quot;" />
+            <option value="&quot;ru.netology.TravelOfTheDayTest.invalidMonthPaymentCase&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -147,7 +147,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TravelOfTheDayTest.positiveCreditCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TravelOfTheDayTest.invalidNamePaymentCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -160,7 +160,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.TravelOfTheDayTest.positiveCreditCase&quot;" />
+            <option value="&quot;ru.netology.TravelOfTheDayTest.invalidNamePaymentCase&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -170,7 +170,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TravelOfTheDayTest.positivePaymentCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TravelOfTheDayTest.invalidYearPaymentCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -183,7 +183,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.TravelOfTheDayTest.positivePaymentCase&quot;" />
+            <option value="&quot;ru.netology.TravelOfTheDayTest.invalidYearPaymentCase&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -195,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TravelOfTheDayTest.positivePaymentCase" />
-        <item itemvalue="Gradle.TravelOfTheDayTest.emptyCvvCreditCase" />
-        <item itemvalue="Gradle.TravelOfTheDayTest.negativePaymentCase" />
-        <item itemvalue="Gradle.TravelOfTheDayTest.positiveCreditCase" />
-        <item itemvalue="Gradle.TravelOfTheDayTest.emptyNameCreditCase" />
+        <item itemvalue="Gradle.TravelOfTheDayTest.emptyCardNumberPaymentCase" />
+        <item itemvalue="Gradle.TravelOfTheDayTest.boardMonthAndYearPaymentCase" />
+        <item itemvalue="Gradle.TravelOfTheDayTest.invalidNamePaymentCase" />
+        <item itemvalue="Gradle.TravelOfTheDayTest.invalidYearPaymentCase" />
+        <item itemvalue="Gradle.TravelOfTheDayTest.invalidMonthPaymentCase" />
       </list>
     </recent_temporary>
   </component>
@@ -275,7 +275,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688404421476</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="nine">
+      <created>1688485305009</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1688485305009</updated>
+    </task>
+    <task id="LOCAL-00011" summary="ten">
+      <created>1688485577895</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1688485577895</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,6 +314,8 @@
     <MESSAGE value="six" />
     <MESSAGE value="seven" />
     <MESSAGE value="eight" />
-    <option name="LAST_COMMIT_MESSAGE" value="eight" />
+    <MESSAGE value="nine" />
+    <MESSAGE value="ten" />
+    <option name="LAST_COMMIT_MESSAGE" value="ten" />
   </component>
 </project>
