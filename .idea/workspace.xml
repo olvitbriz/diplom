@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46337c76-8f3f-4c9c-b0fb-2bb6e737539e" name="Changes" comment="ten">
+    <list default="true" id="46337c76-8f3f-4c9c-b0fb-2bb6e737539e" name="Changes" comment="eleven">
+      <change afterPath="$PROJECT_DIR$/Report.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gate-simulator/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/TravelOfTheDayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/TravelOfTheDayTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/data/SQLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/data/SQLHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,13 +79,14 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\learning\diplom\qa-diploma\gate-simulator" />
+      <recent name="D:\learning\diplom\qa-diploma" />
       <recent name="D:\learning\diplom\qa-diploma\src\test\java" />
       <recent name="D:\learning\diplom\qa-diploma\src\test" />
-      <recent name="D:\learning\diplom\qa-diploma" />
       <recent name="D:\learning\diplom\qa-diploma\artifacts" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TravelOfTheDayTest.emptyCardNumberPaymentCase">
+  <component name="RunManager" selected="Gradle.TravelOfTheDayTest.positivePaymentCase">
     <configuration name="TravelOfTheDayTest.boardMonthAndYearPaymentCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -115,29 +124,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;ru.netology.TravelOfTheDayTest.emptyCardNumberPaymentCase&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="TravelOfTheDayTest.invalidMonthPaymentCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.netology.TravelOfTheDayTest.invalidMonthPaymentCase&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -193,13 +179,36 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="TravelOfTheDayTest.positivePaymentCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.netology.TravelOfTheDayTest.positivePaymentCase&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TravelOfTheDayTest.positivePaymentCase" />
         <item itemvalue="Gradle.TravelOfTheDayTest.emptyCardNumberPaymentCase" />
         <item itemvalue="Gradle.TravelOfTheDayTest.boardMonthAndYearPaymentCase" />
         <item itemvalue="Gradle.TravelOfTheDayTest.invalidNamePaymentCase" />
         <item itemvalue="Gradle.TravelOfTheDayTest.invalidYearPaymentCase" />
-        <item itemvalue="Gradle.TravelOfTheDayTest.invalidMonthPaymentCase" />
       </list>
     </recent_temporary>
   </component>
@@ -289,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688485577895</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="eleven">
+      <created>1688661525441</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1688661525441</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -316,6 +332,7 @@
     <MESSAGE value="eight" />
     <MESSAGE value="nine" />
     <MESSAGE value="ten" />
-    <option name="LAST_COMMIT_MESSAGE" value="ten" />
+    <MESSAGE value="eleven" />
+    <option name="LAST_COMMIT_MESSAGE" value="eleven" />
   </component>
 </project>

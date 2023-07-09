@@ -34,7 +34,7 @@ public class TravelOfTheDayTest {
 
     @AfterAll
     static void teardown() {
-        cleanDatabase();
+       cleanDatabase();
     }
 
 

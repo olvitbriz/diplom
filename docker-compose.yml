@@ -1,8 +1,7 @@
 version: '3.7'
 services:
-  mysql:
-    image: mysql:8.0.18
-    restart: always
+  mysqldb:
+    image: mysql:8.0.31
     ports:
       - '3306:3306'
     environment:
@@ -10,23 +9,15 @@ services:
       - MYSQL_DATABASE=app
       - MYSQL_USER=app
       - MYSQL_PASSWORD=pass
-  postgres:
-    image: postgres:13-alpine
+  postgresdb:
+    image: postgres:14-alpine
     ports:
       - '5432:5432'
     environment:
       - POSTGRES_DB=app
       - POSTGRES_USER=app
       - POSTGRES_PASSWORD=pass
-
-  node:
-    image: "node:8"
-    user: "node"
+  node-app:
+    build: ./gate-simulator
     ports:
       - '9999:9999'
-    working_dir: /home/node/app
-    environment:
-      - NODE_ENV=production
-    volumes:
-      - ./gate-simulator:/home/node/app
-    command: "npm start"
