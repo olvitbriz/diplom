@@ -34,7 +34,7 @@ public class TravelOfTheDayTest {
 
     @AfterAll
     static void teardown() {
-       cleanDatabase();
+        cleanDatabase();
     }
 
 
@@ -75,7 +75,6 @@ public class TravelOfTheDayTest {
     public void randomPaymentCase() {
 
         var paymentPage = open("http://localhost:8080", PaymentPage.class);
-        cleanDatabase();
         PaymentPage.paymentField.click();
         PaymentPage.cardNumberField.setValue(DataHelper.generateRandomInfo(1, 1).getNumber());
         PaymentPage.monthField.setValue(DataHelper.generateRandomInfo(1, 1).getMonth());
@@ -311,6 +310,7 @@ public class TravelOfTheDayTest {
         CreditPage.sendField.click();
         $(".input__sub").shouldHave(Condition.exactText("Неверно указан срок действия карты")).shouldBe(Condition.visible);
     }
+
     @Test
     public void invalidYearCreditCase() {
 

@@ -20,21 +20,22 @@ public class SQLHelper {
         return DriverManager.getConnection(System.getProperty("db.url"), System.getProperty("db.user"), System.getProperty("db.password"));
     }
 
-    public static DataHelper.Status getPaymentStatus() {
+    public static String getPaymentStatus() {
         var statusSQL = "SELECT status FROM payment_entity ORDER BY created DESC LIMIT 1";
         try (var conn = getConnection()) {
-             var status=runner.query(conn, statusSQL, new ScalarHandler<String>());
-        return new DataHelper.Status(status);
+            String status = runner.query(conn, statusSQL, new ScalarHandler<String>());
+            return status;
         } catch (SQLException exception) {
             exception.printStackTrace();
-       }
+        }
         return null;
-   }
-    public static DataHelper.Status getCreditStatus() {
+    }
+
+    public static String getCreditStatus() {
         var statusSQL = "SELECT status FROM credit_request_entity ORDER BY created DESC LIMIT 1";
         try (var conn = getConnection()) {
-            var status=runner.query(conn, statusSQL, new ScalarHandler<String>());
-            return new DataHelper.Status(status);
+            String status = runner.query(conn, statusSQL, new ScalarHandler<String>());
+            return status;
         } catch (SQLException exception) {
             exception.printStackTrace();
         }

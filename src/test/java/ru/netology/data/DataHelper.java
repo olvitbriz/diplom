@@ -57,8 +57,7 @@ public class DataHelper {
     }
 
 
-
-        @Value
+    @Value
     public static class CardInfo {
         String number;
         String status;
@@ -72,10 +71,7 @@ public class DataHelper {
         private String name;
         private String cvv;
     }
-    @Value
-    public static class Status {
-        String status;
-    }
+
 
     @Data
     @NoArgsConstructor
@@ -87,6 +83,7 @@ public class DataHelper {
         private String status;
         private String transaction_id;
     }
+
     @Data
     @NoArgsConstructor
     @AllArgsConstructor

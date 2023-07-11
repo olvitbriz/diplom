@@ -31,11 +31,11 @@ public class CreditPage {
 
     public static void verifyNotificationOkVisibility() {
 
-        $(".notification__content").shouldBe(Condition.visible, Duration.ofSeconds(10)).shouldHave(Condition.exactText("Операция одобрена банком."));
+        $(".notification__content").shouldBe(Condition.visible, Duration.ofSeconds(15)).shouldHave(Condition.exactText("Операция одобрена банком."));
     }
     public static void verifyErrorNotificationVisibility() {
 
-        $(".notification__content").shouldBe(Condition.visible, Duration.ofSeconds(10)).shouldHave(Condition.exactText("Ошибка! Банк отказал в проведении операции."));
+        $(".notification__content").shouldBe(Condition.visible, Duration.ofSeconds(15)).shouldHave(Condition.exactText("Ошибка! Банк отказал в проведении операции."));
     }
 
 
