@@ -13,6 +13,6 @@
 2. Запуск тестов с указанием пути к базе данных postgreSQL выполнить  в терминале с помощью команды  ./gradlew clean test "-Db.url=jdbc:postgresql://localhost:5432/app"
 
 ## Документация
-1. План дипломной работы 
-2. Отчет о дипломной работе 
-3. Резюме 
+1. План дипломной работы https://github.com/olvitbriz/diplom/blob/719b8d7ede69e14f6fbac6eac7e65143d98355ae/docs/Plan.md
+2. Отчет о дипломной работе https://github.com/olvitbriz/diplom/blob/719b8d7ede69e14f6fbac6eac7e65143d98355ae/docs/Report.md
+3. Резюме https://github.com/olvitbriz/diplom/blob/719b8d7ede69e14f6fbac6eac7e65143d98355ae/docs/Summary.md
