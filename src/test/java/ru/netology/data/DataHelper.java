@@ -13,7 +13,7 @@ import java.util.Locale;
 import java.util.Random;
 
 public class DataHelper {
-    private static Faker faker = new Faker(new Locale("ru"));
+    private static Faker faker = new Faker(new Locale("en"));
 
     private DataHelper() {
     }

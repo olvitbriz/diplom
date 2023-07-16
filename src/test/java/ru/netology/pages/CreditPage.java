@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class CreditPage {
 
-    private SelenideElement paymentField = $$("button").find(Condition.exactText("Купить"));
+    private SelenideElement creditField = $$("button").find(Condition.exactText("Купить"));
     private SelenideElement cardNumberField = $("[placeholder='0000 0000 0000 0000']");
     private SelenideElement monthField = $("[placeholder='08']");
     private SelenideElement yearField = $("[placeholder='22']");
@@ -22,9 +22,9 @@ public class CreditPage {
     private SelenideElement sendField = $$("button").find(Condition.exactText("Продолжить"));
 
 
-    public void paymentFieldClick() {
+    public void creditFieldClick() {
 
-        paymentField.click();
+        creditField.click();
     }
 
     public void cardNumberFieldValue(String cardNumber) {
@@ -58,32 +58,32 @@ public class CreditPage {
     }
 
 
-    public static void verifyNotificationOkVisibility() {
+    public void verifyNotificationOkVisibility() {
 
         $(".notification__content").shouldBe(Condition.visible, Duration.ofSeconds(15)).shouldHave(Condition.exactText("Операция одобрена банком."));
     }
 
-    public static void verifyErrorNotificationVisibility() {
+    public void verifyErrorNotificationVisibility() {
 
         $(".notification__content").shouldBe(Condition.visible, Duration.ofSeconds(15)).shouldHave(Condition.exactText("Ошибка! Банк отказал в проведении операции."));
     }
 
-    public static void wrongFormat() {
+    public void wrongFormat() {
 
         $(".input__sub").shouldBe(Condition.visible).shouldHave(Condition.exactText("Неверный формат"));
     }
 
-    public static void necessarilyField() {
+    public void necessarilyField() {
 
         $(".input__sub").shouldBe(Condition.visible).shouldHave(Condition.exactText("Поле обязательно для заполнения"));
     }
 
-    public static void wrongValidity() {
+    public void wrongValidity() {
 
         $(".input__sub").shouldBe(Condition.visible).shouldHave(Condition.exactText("Неверно указан срок действия карты"));
     }
 
-    public static void endOfValidity() {
+    public void endOfValidity() {
 
         $(".input__sub").shouldBe(Condition.visible).shouldHave(Condition.exactText("Истёк срок действия карты"));
     }

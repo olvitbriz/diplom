@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46337c76-8f3f-4c9c-b0fb-2bb6e737539e" name="Changes" comment="fourteen">
+    <list default="true" id="46337c76-8f3f-4c9c-b0fb-2bb6e737539e" name="Changes" comment="fifteen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/TravelOfTheDayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/TravelOfTheDayTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/data/DataHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/data/DataHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/pages/CreditPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/pages/CreditPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/pages/PaymentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/pages/PaymentPage.java" afterDir="false" />
     </list>
@@ -320,7 +323,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689264285027</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fourteen">
+      <created>1689271833021</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1689271833021</updated>
+    </task>
+    <task id="LOCAL-00017" summary="fifteen">
+      <created>1689272009443</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1689272009443</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -351,6 +368,7 @@
     <MESSAGE value="twelve" />
     <MESSAGE value="final" />
     <MESSAGE value="fourteen" />
-    <option name="LAST_COMMIT_MESSAGE" value="fourteen" />
+    <MESSAGE value="fifteen" />
+    <option name="LAST_COMMIT_MESSAGE" value="fifteen" />
   </component>
 </project>

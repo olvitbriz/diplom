@@ -60,32 +60,32 @@ public class PaymentPage {
     }
 
 
-    public static void verifyNotificationOkVisibility() {
+    public void verifyNotificationOkVisibility() {
 
         $(".notification__content").shouldBe(Condition.visible, Duration.ofSeconds(15)).shouldHave(Condition.exactText("Операция одобрена банком."));
     }
 
-    public static void verifyErrorNotificationVisibility() {
+    public void verifyErrorNotificationVisibility() {
 
         $(".notification__content").shouldBe(Condition.visible, Duration.ofSeconds(15)).shouldHave(Condition.exactText("Ошибка! Банк отказал в проведении операции."));
     }
 
-    public static void wrongFormat() {
+    public void wrongFormat() {
 
         $(".input__sub").shouldBe(Condition.visible).shouldHave(Condition.exactText("Неверный формат"));
     }
 
-    public static void necessarilyField() {
+    public void necessarilyField() {
 
         $(".input__sub").shouldBe(Condition.visible).shouldHave(Condition.exactText("Поле обязательно для заполнения"));
     }
 
-    public static void wrongValidity() {
+    public void wrongValidity() {
 
         $(".input__sub").shouldBe(Condition.visible).shouldHave(Condition.exactText("Неверно указан срок действия карты"));
     }
 
-    public static void endOfValidity() {
+    public void endOfValidity() {
 
         $(".input__sub").shouldBe(Condition.visible).shouldHave(Condition.exactText("Истёк срок действия карты"));
     }

@@ -51,8 +51,9 @@ public class TravelOfTheDayTest {
         paymentPage.nameFieldValue(randomInfo.getName());
         paymentPage.cvvFieldValue(randomInfo.getCvv());
         paymentPage.sendFieldClick();
-        assertEquals("APPROVED", SQLHelper.getPaymentStatus());
         paymentPage.verifyNotificationOkVisibility();
+        assertEquals("APPROVED", SQLHelper.getPaymentStatus());
+
 
     }
 
@@ -69,8 +70,9 @@ public class TravelOfTheDayTest {
         paymentPage.nameFieldValue(randomInfo.getName());
         paymentPage.cvvFieldValue(randomInfo.getCvv());
         paymentPage.sendFieldClick();
-        assertEquals("DECLINED", SQLHelper.getPaymentStatus());
         paymentPage.verifyErrorNotificationVisibility();
+        assertEquals("DECLINED", SQLHelper.getPaymentStatus());
+
     }
 
     @Test
@@ -85,8 +87,9 @@ public class TravelOfTheDayTest {
         paymentPage.nameFieldValue(randomInfo.getName());
         paymentPage.cvvFieldValue(randomInfo.getCvv());
         paymentPage.sendFieldClick();
-        assertNull(SQLHelper.getPaymentStatus());
         paymentPage.verifyErrorNotificationVisibility();
+        assertNull(SQLHelper.getPaymentStatus());
+
     }
 
     @Test
@@ -255,15 +258,16 @@ public class TravelOfTheDayTest {
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var approvedInfo = DataHelper.getApprovedCardData();
         var randomInfo = DataHelper.generateRandomInfo(1,1);
-        creditPage.paymentFieldClick();
+        creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(approvedInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
         creditPage.yearFieldValue(randomInfo.getYear());
         creditPage.nameFieldValue(randomInfo.getName());
         creditPage.cvvFieldValue(randomInfo.getCvv());
         creditPage.sendFieldClick();
-        assertEquals("APPROVED", SQLHelper.getCreditStatus());
         creditPage.verifyNotificationOkVisibility();
+        assertEquals("APPROVED", SQLHelper.getCreditStatus());
+
     }
 
     @Test
@@ -272,15 +276,16 @@ public class TravelOfTheDayTest {
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var declinedInfo = DataHelper.getDeclinedCardData();
         var randomInfo = DataHelper.generateRandomInfo(1,1);
-        creditPage.paymentFieldClick();
+        creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(declinedInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
         creditPage.yearFieldValue(randomInfo.getYear());
         creditPage.nameFieldValue(randomInfo.getName());
         creditPage.cvvFieldValue(randomInfo.getCvv());
         creditPage.sendFieldClick();
-        assertEquals("DECLINED", SQLHelper.getCreditStatus());
         creditPage.verifyErrorNotificationVisibility();
+        assertEquals("DECLINED", SQLHelper.getCreditStatus());
+
     }
 
     @Test
@@ -288,15 +293,16 @@ public class TravelOfTheDayTest {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var randomInfo = DataHelper.generateRandomInfo(1,1);
-        creditPage.paymentFieldClick();
+        creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
         creditPage.yearFieldValue(randomInfo.getYear());
         creditPage.nameFieldValue(randomInfo.getName());
         creditPage.cvvFieldValue(randomInfo.getCvv());
         creditPage.sendFieldClick();
-        assertNull(SQLHelper.getCreditStatus());
         creditPage.verifyErrorNotificationVisibility();
+        assertNull(SQLHelper.getCreditStatus());
+
     }
 
     @Test
@@ -304,7 +310,7 @@ public class TravelOfTheDayTest {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var randomInfo = DataHelper.generateRandomInfo(1,1);
-        creditPage.paymentFieldClick();
+        creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue("0000");
         creditPage.monthFieldValue(randomInfo.getMonth());
         creditPage.yearFieldValue(randomInfo.getYear());
@@ -319,7 +325,7 @@ public class TravelOfTheDayTest {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var randomInfo = DataHelper.generateRandomInfo(-1,0);
-        creditPage.paymentFieldClick();
+        creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
         creditPage.yearFieldValue(randomInfo.getYear());
@@ -334,7 +340,7 @@ public class TravelOfTheDayTest {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var randomInfo = DataHelper.generateRandomInfo(1,-1);
-        creditPage.paymentFieldClick();
+        creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
         creditPage.yearFieldValue(randomInfo.getYear());
@@ -350,7 +356,7 @@ public class TravelOfTheDayTest {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var randomInfo = DataHelper.generateRandomInfo(1,1);
-        creditPage.paymentFieldClick();
+        creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
         creditPage.yearFieldValue(randomInfo.getYear());
@@ -365,7 +371,7 @@ public class TravelOfTheDayTest {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var randomInfo = DataHelper.generateRandomInfo(1,1);
-        creditPage.paymentFieldClick();
+        creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
         creditPage.yearFieldValue(randomInfo.getYear());
@@ -381,7 +387,7 @@ public class TravelOfTheDayTest {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var randomInfo = DataHelper.generateRandomInfo(0,0);
-        creditPage.paymentFieldClick();
+        creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
         creditPage.yearFieldValue(randomInfo.getYear());
@@ -396,7 +402,7 @@ public class TravelOfTheDayTest {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var randomInfo = DataHelper.generateRandomInfo(1,1);
-        creditPage.paymentFieldClick();
+        creditPage.creditFieldClick();
         creditPage.monthFieldValue(randomInfo.getMonth());
         creditPage.yearFieldValue(randomInfo.getYear());
         creditPage.nameFieldValue(randomInfo.getName());
@@ -410,7 +416,7 @@ public class TravelOfTheDayTest {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var randomInfo = DataHelper.generateRandomInfo(1,1);
-        creditPage.paymentFieldClick();
+        creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.yearFieldValue(randomInfo.getYear());
         creditPage.nameFieldValue(randomInfo.getName());
@@ -424,7 +430,7 @@ public class TravelOfTheDayTest {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var randomInfo = DataHelper.generateRandomInfo(1,1);
-        creditPage.paymentFieldClick();
+        creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
         creditPage.nameFieldValue(randomInfo.getName());
@@ -438,7 +444,7 @@ public class TravelOfTheDayTest {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var randomInfo = DataHelper.generateRandomInfo(1,1);
-        creditPage.paymentFieldClick();
+        creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
         creditPage.yearFieldValue(randomInfo.getYear());
@@ -452,7 +458,7 @@ public class TravelOfTheDayTest {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var randomInfo = DataHelper.generateRandomInfo(1,1);
-        creditPage.paymentFieldClick();
+        creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
         creditPage.yearFieldValue(randomInfo.getYear());
