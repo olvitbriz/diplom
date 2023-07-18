@@ -21,39 +21,40 @@
 
 1. Покупка за наличные по карте " 4444 4444 4444 4442"
 
-
+https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/negativePaymentCase.png
 
 2. Покупка за наличные  по рандомной карте 
 
-
+https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/randomPaymentCase.png
 
 3. Не валидное значение поля "Владелец" при покупке по карте
 
-
+https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/invalidNamePaymentCase.png
 
 4. Пустое поле "CVV" при покупке по карте
 
-
+https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/emptyCvvPaymentCase.png
 
 5. Граничное значение полей "Месяц" и "Год" при покупке по карте (требуется уточнить техзадание)
 
-
+https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/boardMonthAndYearPaymentCase.png
 
 6. Покупка в кредит по карте " 4444 4444 4444 4442" 
 
-
+https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/negativeCreditCase.png
 
 7. Покупка в кредит по рандомной карте 
 
-
+https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/randomCreditCase.png
 
 8. Не валидное значение поля "Владелец" при покупке в кредит
 
-
+https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/invalidCreditPaymentCase.png
 
 9. Пустое поле "CVV" при покупке в кредит
 
-
+https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/emptyCvvCreditCase.png
 
 10. Граничное значение полей "Месяц" и "Год" при покупке в кредит (требуется уточнить техзадание)
 
+https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/boardMonthAndYearCreditCase.png
