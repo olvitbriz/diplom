@@ -43,7 +43,7 @@ public class TravelOfTheDayTest {
 
         var paymentPage = open("http://localhost:8080", PaymentPage.class);
         var approvedInfo = DataHelper.getApprovedCardData();
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         paymentPage.paymentFieldClick();
         paymentPage.cardNumberFieldValue(approvedInfo.getNumber());
         paymentPage.monthFieldValue(randomInfo.getMonth());
@@ -62,7 +62,7 @@ public class TravelOfTheDayTest {
 
         var paymentPage = open("http://localhost:8080", PaymentPage.class);
         var declinedInfo = DataHelper.getDeclinedCardData();
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         paymentPage.paymentFieldClick();
         paymentPage.cardNumberFieldValue(declinedInfo.getNumber());
         paymentPage.monthFieldValue(randomInfo.getMonth());
@@ -79,7 +79,7 @@ public class TravelOfTheDayTest {
     public void randomPaymentCase() {
 
         var paymentPage = open("http://localhost:8080", PaymentPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         paymentPage.paymentFieldClick();
         paymentPage.cardNumberFieldValue(randomInfo.getNumber());
         paymentPage.monthFieldValue(randomInfo.getMonth());
@@ -96,7 +96,7 @@ public class TravelOfTheDayTest {
     public void invalidCardNumberPaymentCase() {
 
         var paymentPage = open("http://localhost:8080", PaymentPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         paymentPage.paymentFieldClick();
         paymentPage.cardNumberFieldValue("0000");
         paymentPage.monthFieldValue(randomInfo.getMonth());
@@ -111,7 +111,7 @@ public class TravelOfTheDayTest {
     public void invalidMonthPaymentCase() {
 
         var paymentPage = open("http://localhost:8080", PaymentPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(-1,0);
+        var randomInfo = DataHelper.generateRandomInfo(-1, 0);
         paymentPage.paymentFieldClick();
         paymentPage.cardNumberFieldValue(randomInfo.getNumber());
         paymentPage.monthFieldValue(randomInfo.getMonth());
@@ -126,7 +126,7 @@ public class TravelOfTheDayTest {
     public void invalidYearPaymentCase() {
 
         var paymentPage = open("http://localhost:8080", PaymentPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,-1);
+        var randomInfo = DataHelper.generateRandomInfo(1, -1);
         paymentPage.paymentFieldClick();
         paymentPage.cardNumberFieldValue(randomInfo.getNumber());
         paymentPage.monthFieldValue(randomInfo.getMonth());
@@ -141,7 +141,7 @@ public class TravelOfTheDayTest {
     public void invalidNamePaymentCase() {
 
         var paymentPage = open("http://localhost:8080", PaymentPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         paymentPage.paymentFieldClick();
         paymentPage.cardNumberFieldValue(randomInfo.getNumber());
         paymentPage.monthFieldValue(randomInfo.getMonth());
@@ -156,7 +156,7 @@ public class TravelOfTheDayTest {
     public void invalidCvvPaymentCase() {
 
         var paymentPage = open("http://localhost:8080", PaymentPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         paymentPage.paymentFieldClick();
         paymentPage.cardNumberFieldValue(randomInfo.getNumber());
         paymentPage.monthFieldValue(randomInfo.getMonth());
@@ -171,7 +171,7 @@ public class TravelOfTheDayTest {
     public void boardMonthAndYearPaymentCase() {
 
         var paymentPage = open("http://localhost:8080", PaymentPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(0,0);
+        var randomInfo = DataHelper.generateRandomInfo(0, 0);
         paymentPage.paymentFieldClick();
         paymentPage.cardNumberFieldValue(randomInfo.getNumber());
         paymentPage.monthFieldValue(randomInfo.getMonth());
@@ -186,7 +186,7 @@ public class TravelOfTheDayTest {
     public void emptyCardNumberPaymentCase() {
 
         var paymentPage = open("http://localhost:8080", PaymentPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         paymentPage.paymentFieldClick();
         paymentPage.monthFieldValue(randomInfo.getMonth());
         paymentPage.yearFieldValue(randomInfo.getYear());
@@ -200,7 +200,7 @@ public class TravelOfTheDayTest {
     public void emptyMonthPaymentCase() {
 
         var paymentPage = open("http://localhost:8080", PaymentPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         paymentPage.paymentFieldClick();
         paymentPage.cardNumberFieldValue(randomInfo.getNumber());
         paymentPage.yearFieldValue(randomInfo.getYear());
@@ -214,7 +214,7 @@ public class TravelOfTheDayTest {
     public void emptyYearPaymentCase() {
 
         var paymentPage = open("http://localhost:8080", PaymentPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         paymentPage.paymentFieldClick();
         paymentPage.cardNumberFieldValue(randomInfo.getNumber());
         paymentPage.monthFieldValue(randomInfo.getMonth());
@@ -228,21 +228,21 @@ public class TravelOfTheDayTest {
     public void emptyNamePaymentCase() {
 
         var paymentPage = open("http://localhost:8080", PaymentPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         paymentPage.paymentFieldClick();
         paymentPage.cardNumberFieldValue(randomInfo.getNumber());
         paymentPage.monthFieldValue(randomInfo.getMonth());
         paymentPage.yearFieldValue(randomInfo.getYear());
         paymentPage.cvvFieldValue(randomInfo.getCvv());
         paymentPage.sendFieldClick();
-        paymentPage.necessarilyField() ;
+        paymentPage.necessarilyField();
     }
 
     @Test
     public void emptyCvvPaymentCase() {
 
         var paymentPage = open("http://localhost:8080", PaymentPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         paymentPage.paymentFieldClick();
         paymentPage.cardNumberFieldValue(randomInfo.getNumber());
         paymentPage.monthFieldValue(randomInfo.getMonth());
@@ -257,7 +257,7 @@ public class TravelOfTheDayTest {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var approvedInfo = DataHelper.getApprovedCardData();
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(approvedInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
@@ -275,7 +275,7 @@ public class TravelOfTheDayTest {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
         var declinedInfo = DataHelper.getDeclinedCardData();
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(declinedInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
@@ -292,7 +292,7 @@ public class TravelOfTheDayTest {
     public void randomCreditCase() {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
@@ -309,7 +309,7 @@ public class TravelOfTheDayTest {
     public void invalidCardNumberCreditCase() {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue("0000");
         creditPage.monthFieldValue(randomInfo.getMonth());
@@ -324,7 +324,7 @@ public class TravelOfTheDayTest {
     public void invalidMonthCreditCase() {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(-1,0);
+        var randomInfo = DataHelper.generateRandomInfo(-1, 0);
         creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
@@ -332,14 +332,14 @@ public class TravelOfTheDayTest {
         creditPage.nameFieldValue(randomInfo.getName());
         creditPage.cvvFieldValue(randomInfo.getCvv());
         creditPage.sendFieldClick();
-        creditPage.wrongValidity() ;
+        creditPage.wrongValidity();
     }
 
     @Test
     public void invalidYearCreditCase() {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,-1);
+        var randomInfo = DataHelper.generateRandomInfo(1, -1);
         creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
@@ -355,7 +355,7 @@ public class TravelOfTheDayTest {
     public void invalidNameCreditCase() {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
@@ -370,7 +370,7 @@ public class TravelOfTheDayTest {
     public void invalidCvvCreditCase() {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
@@ -386,7 +386,7 @@ public class TravelOfTheDayTest {
     public void boardMonthAndYearCreditCase() {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(0,0);
+        var randomInfo = DataHelper.generateRandomInfo(0, 0);
         creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
@@ -401,7 +401,7 @@ public class TravelOfTheDayTest {
     public void emptyCardNumberCreditCase() {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         creditPage.creditFieldClick();
         creditPage.monthFieldValue(randomInfo.getMonth());
         creditPage.yearFieldValue(randomInfo.getYear());
@@ -415,7 +415,7 @@ public class TravelOfTheDayTest {
     public void emptyMonthCreditCase() {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.yearFieldValue(randomInfo.getYear());
@@ -429,7 +429,7 @@ public class TravelOfTheDayTest {
     public void emptyYearCreditCase() {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
@@ -443,21 +443,21 @@ public class TravelOfTheDayTest {
     public void emptyNameCreditCase() {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
         creditPage.yearFieldValue(randomInfo.getYear());
         creditPage.cvvFieldValue(randomInfo.getCvv());
         creditPage.sendFieldClick();
-        creditPage.necessarilyField() ;
+        creditPage.necessarilyField();
     }
 
     @Test
     public void emptyCvvCreditCase() {
 
         var creditPage = open("http://localhost:8080", CreditPage.class);
-        var randomInfo = DataHelper.generateRandomInfo(1,1);
+        var randomInfo = DataHelper.generateRandomInfo(1, 1);
         creditPage.creditFieldClick();
         creditPage.cardNumberFieldValue(randomInfo.getNumber());
         creditPage.monthFieldValue(randomInfo.getMonth());
