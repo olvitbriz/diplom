@@ -21,40 +21,39 @@
 
 1. Покупка за наличные по карте " 4444 4444 4444 4442"
 
-![negativePaymentCase.png](..%2F..%2F..%2FnegativePaymentCase.png)
+
 
 2. Покупка за наличные  по рандомной карте 
 
-![randomPaymentCase.png](..%2F..%2F..%2FrandomPaymentCase.png)
+
 
 3. Не валидное значение поля "Владелец" при покупке по карте
 
-![invalidNamePaymentCase.png](..%2F..%2F..%2FinvalidNamePaymentCase.png)
+
 
 4. Пустое поле "CVV" при покупке по карте
 
-![emptyCvvPaymentCase.png](..%2F..%2F..%2FemptyCvvPaymentCase.png)
+
 
 5. Граничное значение полей "Месяц" и "Год" при покупке по карте (требуется уточнить техзадание)
 
-![boardMonthAndYearPaymentCase.png](..%2F..%2F..%2FboardMonthAndYearPaymentCase.png)
+
 
 6. Покупка в кредит по карте " 4444 4444 4444 4442" 
 
-![negativeCreditCase.png](..%2F..%2F..%2FnegativeCreditCase.png)
+
 
 7. Покупка в кредит по рандомной карте 
 
-![randomCreditCase.png](..%2F..%2F..%2FrandomCreditCase.png)
+
 
 8. Не валидное значение поля "Владелец" при покупке в кредит
 
-![invalidCreditPaymentCase.png](..%2F..%2F..%2FinvalidCreditPaymentCase.png)
+
 
 9. Пустое поле "CVV" при покупке в кредит
 
-![emptyCvvCreditCase.png](..%2F..%2F..%2FemptyCvvCreditCase.png)
+
 
 10. Граничное значение полей "Месяц" и "Год" при покупке в кредит (требуется уточнить техзадание)
 
-![boardMonthAndYearCreditCase.png](..%2F..%2F..%2FboardMonthAndYearCreditCase.png)
