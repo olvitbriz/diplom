@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46337c76-8f3f-4c9c-b0fb-2bb6e737539e" name="Changes" comment="seventeen" />
+    <list default="true" id="46337c76-8f3f-4c9c-b0fb-2bb6e737539e" name="Changes" comment="eigthteen">
+      <change beforePath="$PROJECT_DIR$/docs/Report.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Report.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +61,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/learning/zadanie2.5/docker",
+    "last_opened_file_path": "D:/learning/diplom/qa-diploma",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -67,6 +69,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\learning\diplom\qa-diploma" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\learning\diplom\qa-diploma\docs" />
       <recent name="D:\learning\diplom\qa-diploma\gate-simulator" />
@@ -343,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689700913381</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="eigthteen">
+      <created>1689701544704</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1689701544704</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -377,6 +389,7 @@
     <MESSAGE value="fifteen" />
     <MESSAGE value="sixteen" />
     <MESSAGE value="seventeen" />
-    <option name="LAST_COMMIT_MESSAGE" value="seventeen" />
+    <MESSAGE value="eigthteen" />
+    <option name="LAST_COMMIT_MESSAGE" value="eigthteen" />
   </component>
 </project>
