@@ -16,45 +16,47 @@
 
 Автотестирование реализовано полностью.
 Из 28 тестов прошли успешно 18, а упали 10 ( 
-в процентном отношении 65% успешных, 35% упали). В процессе тестирования было выявлено 10 дефектов, которые были оформлены в виде баг-репортов:
+в процентном отношении 65% успешных, 35% упали).
+
+
+В процессе тестирования было выявлено 10 дефектов, которые были оформлены в виде баг-репортов:
 
 
 1. Покупка за наличные по карте " 4444 4444 4444 4442"
 
-https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/negativePaymentCase.png
+https://github.com/olvitbriz/diplom/blob/d6bf87a16d9b964d6c7c96edeb5c0e6205bdb849/docs/screenshots/negativePaymentCase.png
 
 2. Покупка за наличные  по рандомной карте 
 
-https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/randomPaymentCase.png
-
+https://github.com/olvitbriz/diplom/blob/d6bf87a16d9b964d6c7c96edeb5c0e6205bdb849/docs/screenshots/randomPaymentCase.png
 3. Не валидное значение поля "Владелец" при покупке по карте
 
-https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/invalidNamePaymentCase.png
+https://github.com/olvitbriz/diplom/blob/d6bf87a16d9b964d6c7c96edeb5c0e6205bdb849/docs/screenshots/invalidNamePaymentCase.png
 
 4. Пустое поле "CVV" при покупке по карте
 
-https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/emptyCvvPaymentCase.png
+https://github.com/olvitbriz/diplom/blob/d6bf87a16d9b964d6c7c96edeb5c0e6205bdb849/docs/screenshots/emptyCvvPaymentCase.png
 
 5. Граничное значение полей "Месяц" и "Год" при покупке по карте (требуется уточнить техзадание)
 
-https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/boardMonthAndYearPaymentCase.png
+https://github.com/olvitbriz/diplom/blob/d6bf87a16d9b964d6c7c96edeb5c0e6205bdb849/docs/screenshots/boardMonthAndYearPaymentCase.png
 
 6. Покупка в кредит по карте " 4444 4444 4444 4442" 
 
-https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/negativeCreditCase.png
+https://github.com/olvitbriz/diplom/blob/d6bf87a16d9b964d6c7c96edeb5c0e6205bdb849/docs/screenshots/negativeCreditCase.png
 
 7. Покупка в кредит по рандомной карте 
 
-https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/randomCreditCase.png
+https://github.com/olvitbriz/diplom/blob/d6bf87a16d9b964d6c7c96edeb5c0e6205bdb849/docs/screenshots/randomCreditCase.png
 
 8. Не валидное значение поля "Владелец" при покупке в кредит
 
-https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/invalidCreditPaymentCase.png
+https://github.com/olvitbriz/diplom/blob/d6bf87a16d9b964d6c7c96edeb5c0e6205bdb849/docs/screenshots/invalidCreditPaymentCase.png
 
 9. Пустое поле "CVV" при покупке в кредит
 
-https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/emptyCvvCreditCase.png
+https://github.com/olvitbriz/diplom/blob/d6bf87a16d9b964d6c7c96edeb5c0e6205bdb849/docs/screenshots/emptyCvvCreditCase.png
 
 10. Граничное значение полей "Месяц" и "Год" при покупке в кредит (требуется уточнить техзадание)
 
-https://github.com/olvitbriz/diplom/blob/97cf00a90e124e40f60a027fe1527c47c8bad5a0/boardMonthAndYearCreditCase.png
+https://github.com/olvitbriz/diplom/blob/d6bf87a16d9b964d6c7c96edeb5c0e6205bdb849/docs/screenshots/boardMonthAndYearCreditCase.png
